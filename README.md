@@ -140,3 +140,5 @@ class Migration(migrations.Migration):
 $ python manage.py makemigrations \
 $ python manage.py migrate \
 $ python manage.py runserver \
+
+- Can you remove the address attribute from Address model so you are left with just the postcode
