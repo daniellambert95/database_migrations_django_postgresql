@@ -9,8 +9,8 @@ from a Django Postgres DB it is also a step-by-step guide.
 
 # Creating postgresql database
 
-$ createdb -h localhost
--- createdb -h <db_name>
+$ createdb -h localhost \
+-- createdb -h <db_name> \
 $ psql -h localhost  
 -- psql -h <db_name>
 
