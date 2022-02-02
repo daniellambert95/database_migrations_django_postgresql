@@ -72,7 +72,7 @@ from .models import Address
 
 or
 
-2. \ @admin.register(Address) \
+2. @admin.register(Address) \
 class addressAdmin(admin.ModelAdmin): \
     list_display = ('id', 'name', 'email', 'address') \
 
