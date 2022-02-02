@@ -1,4 +1,5 @@
 
+from operator import mod
 from django.db import models
 # Create your models here.
 
@@ -6,7 +7,8 @@ from django.db import models
 class Address(models.Model):
     name = models.CharField(max_length=80, blank=False)
     email = models.EmailField(blank=False)
-    address = models.CharField(max_length=200,  blank=False)
+    address = models.CharField(max_length=200, default="No address given")
+    postcode = models.CharField(max_length=25, default="00000")
 
     class Meta:
         verbose_name = "address book"

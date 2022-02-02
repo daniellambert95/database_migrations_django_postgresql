@@ -8,4 +8,4 @@ from .models import Address
 
 @admin.register(Address)
 class addressAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email', 'address')
+    list_display = ('id', 'name', 'email', 'postcode', 'address' )
