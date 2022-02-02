@@ -11,33 +11,33 @@ from a Django Postgres DB it is also a step-by-step guide.
 
 $ createdb -h localhost \
 -- createdb -h <db_name> \
-$ psql -h localhost  
+$ psql -h localhost  \
 -- psql -h <db_name>
 
-=# DROP DATABASE IF EXISTS addressbook_django;
-=# CREATE DATABASE addressbook_django;
+=# DROP DATABASE IF EXISTS addressbook_django; \
+=# CREATE DATABASE addressbook_django; \
 
-=# CREATE USER username WITH PASSWORD 'password';
-=#  ALTER ROLE username SET client_encoding TO ‘utf8’;
-=#  ALTER ROLE username SET default_transaction_isolation TO ‘read committed’;
-=#  ALTER DATABASE postgres SET timezone TO 'UTC';
-=#  GRANT ALL PRIVILEGES ON DATABASE addressbook_django TO username;
-=#  \q
+=# CREATE USER username WITH PASSWORD 'password'; \
+=#  ALTER ROLE username SET client_encoding TO ‘utf8’; \
+=#  ALTER ROLE username SET default_transaction_isolation TO ‘read committed’; \
+=#  ALTER DATABASE postgres SET timezone TO 'UTC'; \
+=#  GRANT ALL PRIVILEGES ON DATABASE addressbook_django TO username; \
+=#  \q \
 
 - $ pip install django psycopg2
 
 # Change DATABASES in settings.py and import local_settings.py / environment variables
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'addressbook_django',
-        'USER': 'daniel',
-        'PASSWORD': PASSWORD,
-        'HOST': 'localhost',
-        'POST': '',
-    }
-}
+DATABASES = { \
+    'default': { \
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', \
+        'NAME': 'addressbook_django', \
+        'USER': 'daniel', \
+        'PASSWORD': PASSWORD, \
+        'HOST': 'localhost', \
+        'POST': '', \
+    } \
+} \
 
 - Edit ALLOWED HOSTS
 just add '*'
@@ -72,9 +72,9 @@ from .models import Address
 
 or
 
-2. @admin.register(Address)
-class addressAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email', 'address')
+2. \ @admin.register(Address) \
+class addressAdmin(admin.ModelAdmin): \
+    list_display = ('id', 'name', 'email', 'address') \
 
 # Make migrations and migrate
 
