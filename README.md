@@ -28,14 +28,14 @@ $ psql -h localhost  \
 
 ### Change DATABASES in settings.py and import local_settings.py / environment variables
 `
-DATABASES = { \
-    'default': { \
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', \
-        'NAME': 'addressbook_django', \
-        'USER': 'daniel', \
-        'PASSWORD': PASSWORD, \
-        'HOST': 'localhost', \
-        'POST': '', \
+DATABASES = { 
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'addressbook_django', 
+        'USER': 'daniel', 
+        'PASSWORD': PASSWORD, 
+        'HOST': 'localhost', 
+        'POST': '', 
     } \
 } \
 `
@@ -50,10 +50,10 @@ except ImportError:
 
 ### Create a model
 `
-class Address(models.Model): \
-    name = models.CharField(max_length=80, blank=False) \
-    email = models.EmailField(blank=False) \
-    address = models.CharField(max_length=200,  blank=False) \
+class Address(models.Model): 
+    name = models.CharField(max_length=80, blank=False) 
+    email = models.EmailField(blank=False) 
+    address = models.CharField(max_length=200,  blank=False) 
 
     class Meta:
         verbose_name = "address book"
@@ -72,9 +72,9 @@ from .models import Address
 
 or
 
-2. @admin.register(Address) \
-class addressAdmin(admin.ModelAdmin): \
-    list_display = ('id', 'name', 'email', 'address') \
+2. @admin.register(Address) 
+class addressAdmin(admin.ModelAdmin): 
+    list_display = ('id', 'name', 'email', 'address') 
 ```
 # Make migrations and migrate
 
