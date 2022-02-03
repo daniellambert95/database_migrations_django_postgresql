@@ -50,10 +50,10 @@ except ImportError:
 
 ### Create a model
 
-class Address(models.Model):
-    name = models.CharField(max_length=80, blank=False)
-    email = models.EmailField(blank=False)
-    address = models.CharField(max_length=200,  blank=False)
+class Address(models.Model): \
+    name = models.CharField(max_length=80, blank=False) \
+    email = models.EmailField(blank=False) \
+    address = models.CharField(max_length=200,  blank=False) \
 
     class Meta:
         verbose_name = "address book"
